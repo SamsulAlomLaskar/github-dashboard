@@ -1,0 +1,101 @@
+.repo-details-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-color);
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .stats {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .languages,
+  .contributors {
+    margin-bottom: 2rem;
+
+    h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+
+      li {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+
+        a {
+          color: var(--link-color);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .kanban-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0366d6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #024eaf;
+    }
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-bottom: 1.5rem;
+    background-color: #1980f5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: #0651b3;
+    }
+  }
+}

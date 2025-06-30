@@ -1,0 +1,115 @@
+/* ===================
+  Base Reset & Layout
+=================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===================
+  Theme Variables
+=================== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1c1c1c;
+  --card-bg: #f9f9f9;
+  --link-color: #0366d6;
+  --border-color: #ddd;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-bg: #1f1f1f;
+  --link-color: #0f50a4;
+  --border-color: #2c2c2c;
+}
+
+/* ===================
+  Global Elements
+=================== */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font-family: inherit;
+  background: var(--link-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+}
+
+input,
+select,
+textarea {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--link-color);
+  }
+}
+
+/* ===================
+  Utility Layouts
+=================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Optional scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link-color);
+}

@@ -1,0 +1,117 @@
+.main-header {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+
+    line-height: 1.2;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: -1px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: var(--text-color);
+      transition: color 0.2s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input {
+        display: none;
+      }
+
+      label {
+        width: 52px;
+        height: 26px;
+        background-color: var(--border-color);
+        border-radius: 13px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 6px;
+        box-sizing: border-box;
+      }
+
+      .icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        pointer-events: none;
+
+        .sun svg,
+        .moon svg {
+          width: 14px;
+          height: 14px;
+          color: #fff;
+        }
+      }
+
+      .slider {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        z-index: 1;
+      }
+
+      input:checked + label .slider {
+        transform: translateX(24px);
+      }
+
+      input:checked + label {
+        background-color: var(--link-color);
+      }
+    }
+  }
+}
