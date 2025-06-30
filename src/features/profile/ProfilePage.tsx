@@ -141,18 +141,22 @@ export const ProfilePage = () => {
       {followers && (
         <div className="section">
           <h3>👥 Followers</h3>
-          <ul className="follower-list">
-            {followers.map((follower: any) => (
-              <li key={follower.id}>
-                <button
-                  className="follower-button"
-                  onClick={() => handleFollowerClick(follower.login)}
-                >
-                  {follower.login}
-                </button>
-              </li>
-            ))}
-          </ul>
+          {followers.length === 0 ? (
+            <p>No followers available.</p>
+          ) : (
+            <ul className="follower-list">
+              {followers.map((follower: any) => (
+                <li key={follower.id}>
+                  <button
+                    className="follower-button"
+                    onClick={() => handleFollowerClick(follower.login)}
+                  >
+                    {follower.login}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 
